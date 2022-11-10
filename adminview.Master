@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminview.master.cs" Inherits="footwarestore.adminview" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="adminviewstyle.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="admin_home.aspx">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="adminchangepassword.aspx">Change Password</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="addcategory.aspx">Add Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="viewcategory.aspx">View Category</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="addproduct.aspx">Add Product</a>
+            </li> 
+             <li class="nav-item">
+                <a class="nav-link" href="viewproduct.aspx">View Product</a>
+            </li> 
+             <li class="nav-item">
+                <a class="nav-link" href="pendingordersadmin.aspx">Pending Orders</a>
+            </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="adminlogout.aspx">Logout</a>
+            </li> 
+        </ul>
+    </nav>
+    <div class="container">
+
+        <form id="form1" runat="server">
+             
+            <div class="row">
+                <div class="col-md-12" id="header"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="main">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="row">
+                <div id="footer" class="col-md-12"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

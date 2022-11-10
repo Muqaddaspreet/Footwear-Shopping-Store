@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="publicview.master.cs" Inherits="footwarestore.publicview" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <link href="publicviewstyle.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="publicviewproducts.aspx">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="coustomersignup.aspx">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="customer_login.aspx">Login</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+
+        <form id="form1" runat="server">
+            <div class="row">
+                <div class="col-md-12" id="header">
+                        <div class="col-md-3 float-right">
+                            <img src="photos/shoppingbag.png" />
+                            <asp:HyperLink Font-Size="Large" NavigateUrl="~/publicviewcart.aspx" Font-Bold="true" ID="hl_cartcount" runat="server"></asp:HyperLink>
+                        </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="main">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="row">
+                <div id="footer" class="col-md-12"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
